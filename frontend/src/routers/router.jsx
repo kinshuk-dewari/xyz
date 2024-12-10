@@ -11,6 +11,9 @@ import {
   import { Signin } from "../pages/Signin";
   import { University } from "../pages/University";
    import { Inspector } from "../pages/Inspector";
+   import UniHome from "../pages/University/UniHome";
+import Uniinsights from "../pages/University/UniInsights";
+// import Uploaddocuments from "../pages/University/Uploaddocuments";
 
   const router = createBrowserRouter([
     {
@@ -72,19 +75,31 @@ import {
      ]
     },
     {
-       path:"/university",
-       element:<University/>,
-    //    children:[
-    //      {
-    //        path:"/university/unihome",
-    //        element:<Dashboard/>
-    //      },
+    path:"/university",
+       element:<App/>,
+       children:[
+         {
+           path:"/university/Home",
+           element:<University/>
+         },
+         {
+           path:"/university/uniHome",
+           element:<UniHome/>
+         },
+         {
+           path:"/university/uniInsights",
+           element:<Uniinsights/>
+         },
+        //  {
+        //    path:"/university/uniUploadDocuments",
+        //    element:<Uploaddocuments/>
+        //  },
     //     {
     //       path:"/admin/dashboard/editUni/:id",
     //       element: <EditUni/>,
     //       loader: ({params}) => fetch(`http://localhost:5000/university/${params.id}`)
     //     }
-    //  ]
+     ]
     }
 ]);
 
