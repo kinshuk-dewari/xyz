@@ -12,7 +12,7 @@ export const Signup = () => {
 
     const handleSignup = () => {
         if (designation === "UN") {
-            navigate("/university");
+            navigate("/university/Home");
         } else if (designation === "IS") {
             navigate("/inspector/Home");
         } else {
